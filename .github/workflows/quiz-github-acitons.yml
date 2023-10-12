@@ -1,0 +1,33 @@
+name: Quiz App Workflow
+on: [push]
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      # リビジョンを取得
+      - name: Check out repository
+        uses: action/checkout@v4
+
+      # pnpmをインストール
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # 依存関係のインストール
+      - name: Install dependencies
+        run: pnpm install
+
+      # ESlint チェック
+      - name: Run ESLint
+        run: pnpm lint
+
+      # 単体テスト
+      # - name: Run unit test
+      #   run: pnpm test
+
+      # ビルド
+      - name: Build
+        run: pnpm build
+
+      # E2Eテスト
+      #- name: Run E2E test
+      #  run: pnpm test:e2e
