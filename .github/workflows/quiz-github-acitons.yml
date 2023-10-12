@@ -6,7 +6,7 @@ jobs:
     steps:
       # リビジョンを取得
       - name: Check out repository
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       # pnpmをインストール
       - name: Install pnpm
