@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import Button from '@/components/Button'
+
 const HowToUseGuide = () => {
   return (
     <section>
@@ -9,6 +11,7 @@ const HowToUseGuide = () => {
         <div>
           <h4>カードで学ぶ</h4>
           <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+          <Button>カードで学ぶ</Button>
         </div>
       </div>
       <div>
@@ -16,6 +19,7 @@ const HowToUseGuide = () => {
         <div>
           <h4>クイズで学ぶ</h4>
           <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+          <Button>カードで学ぶ</Button>
         </div>
       </div>
     </section>
